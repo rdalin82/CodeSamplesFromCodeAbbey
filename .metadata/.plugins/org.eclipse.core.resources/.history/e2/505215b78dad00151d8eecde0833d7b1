@@ -1,0 +1,11 @@
+
+public class SumOfDigitsApp {
+	public static void main(String[] args){
+		SumOfDigits sod = new SumOfDigits("./test.txt");
+		
+		sod.getSums();
+		sod.getStringArray();
+		sod.getIntIntArray();
+		System.out.println(sod.getResult());
+	}
+}

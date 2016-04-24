@@ -1,0 +1,6 @@
+
+public class DiceRollApp {
+	public static void main(String[] args) {
+		DiceRoll dr = new DiceRoll();
+	}
+}

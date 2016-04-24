@@ -1,0 +1,19 @@
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+
+public class SumOfDigitsTest {
+
+	;
+
+	@Test
+	public void test() {
+		SumOfDigits sod = new SumOfDigits("./test.txt");
+		ArrayList<Integer> list = new ArrayList<Integer>(100, 1492, 1776]); 
+		assertEquals(list, sod.getSums().getClass());
+	}
+
+}

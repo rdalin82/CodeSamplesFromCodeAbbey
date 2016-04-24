@@ -1,0 +1,8 @@
+
+public class DiceRoll {
+	
+	public DiceRoll(String filename){
+		GetFile gf = new GetFile(filename);
+	}
+
+}

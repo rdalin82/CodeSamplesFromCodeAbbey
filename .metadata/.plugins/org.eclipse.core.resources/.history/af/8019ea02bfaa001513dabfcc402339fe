@@ -1,0 +1,12 @@
+
+public class BodyMass {
+	private GetFile f =new GetFile("./test.txt");
+	private float[][] fArray = f.getIntIntArray();
+	private String result;
+	
+	public String getResult(){
+		
+		
+		return result;
+	}
+}

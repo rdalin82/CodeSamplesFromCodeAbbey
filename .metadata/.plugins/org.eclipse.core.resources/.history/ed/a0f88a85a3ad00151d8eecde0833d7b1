@@ -1,0 +1,14 @@
+
+public class Wsod {
+	private int length;
+	private String input;
+	private String[] inputArray;
+
+	public Wsod(String filename){
+		GetFile gf = new GetFile(filename);
+		this.input = gf.parseFile();
+		this.inputArray = input.split("\n");
+		this.length = Integer.parseInt(inputArray[0]);
+		
+	}
+}

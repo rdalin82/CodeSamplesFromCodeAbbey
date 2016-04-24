@@ -1,0 +1,8 @@
+
+public class SumOfDigitsApp {
+	public static void main(String[] args){
+		GetFile gf = new GetFile("./test.txt");
+		SumOfDigits sod = new SumOfDigits();
+	}
+
+}

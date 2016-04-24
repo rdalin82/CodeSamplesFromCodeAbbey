@@ -1,0 +1,23 @@
+
+public class SumOfDigits {
+	private int[][] input;
+	private String result;
+	private int[] sums;
+	
+	public SumOfDigits(){
+		GetFile gf = new GetFile("./test.txt");
+		this.input = gf.getIntIntArray();
+	}
+	
+	public void makeSums(){
+		this.sums = new int[input.length];
+		for (int i = 0; i < input.length; i++){
+			sums[i] = (input[i][0]*input[i][1])+input[i][2];
+		}
+	}
+	
+	public String result(){
+		
+		return result;
+	}
+}

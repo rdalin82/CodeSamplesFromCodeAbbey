@@ -1,0 +1,19 @@
+
+public class BodyMass {
+	private GetFile f =new GetFile("./test.txt");
+	private float[][] fArray = f.getIntIntArray();
+	private String result;
+	private String bmi;
+	
+	public String computeBMI(float weight, float height){
+		String bmi; 
+		float calculation = (float) (weight/(Math.pow(height, 2)));
+		
+		return bmi; 
+	}
+	public String getResult(){
+		
+		
+		return result;
+	}
+}

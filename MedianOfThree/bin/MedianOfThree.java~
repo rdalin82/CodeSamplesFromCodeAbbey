@@ -1,0 +1,43 @@
+import java.util.Arrays;
+
+
+public class MedianOfThree {
+	private GetFile f = new GetFile("./test.txt");
+	private String file = f.parseFile();
+	private String[] fileArray = {};
+	private int[] intArray={};
+	private int[][] intIntArray = {}; //nested array by line
+	private String result =" ";
+	
+	public int[][] split(){ 
+		fileArray = file.split("/n");
+		for (int i=0; i < fileArray.length; i++){
+			String current = fileArray[i];
+			String[] currentArray = current.split(" ");
+			for (int y=0; y < 2; y++) {
+				String tempString = currentArray[y];
+				int temp = Integer.valueOf(tempString);
+				System.out.println(temp);
+				intArray[y] = temp;
+			}
+			intIntArray[i] = intArray;
+		}
+		return intIntArray;
+	}
+	
+	public String result(){
+		split();
+		for (int i =0; i < intIntArray.length; i++) {
+			Arrays.sort(intIntArray[i]);
+			String median = String.valueOf(intIntArray[i][1]);
+			result = result + median + " ";
+			System.out.print(median);
+		}
+		
+		return result;
+	}
+	
+	public void print(){
+		split();
+	}
+}

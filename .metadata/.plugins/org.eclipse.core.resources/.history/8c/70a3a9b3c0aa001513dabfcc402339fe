@@ -1,0 +1,37 @@
+
+public class BodyMass {
+	private GetFile f =new GetFile("./test.txt");
+	private float[][] fArray = f.getIntIntArray();
+	private String result;
+	private String bmi;
+	
+	public String computeBMI(float weight, float height){
+		 
+		float calculation = (float) (weight/(Math.pow(height, 2)));
+		if (calculation < 18.5){
+			bmi = "Underweight ";
+		}
+		else if (calculation < 25.0 & calculation > 18.5) {
+			bmi = "Normal weight ";
+		}
+		else if (calculation < 30.0 & calculation > 25.0){
+			bmi = "Overweight ";
+		}
+		else if (calculation > 30.0) {
+			bmi = "Obesity ";
+		}
+		else {
+			bmi = "THERE WAS AN ERROR ";
+		}
+		return bmi; 
+	}
+	public String getResult(){
+		for (int i =0; i < fArray.length; i++){
+			for (int y =0; y< fArray[i].length; y+=2){
+				result = result + computeBMI(fArray[i][y], fArray[i][y+1]);
+			}
+		}
+		result = result.trim();
+		return result;
+	}
+}

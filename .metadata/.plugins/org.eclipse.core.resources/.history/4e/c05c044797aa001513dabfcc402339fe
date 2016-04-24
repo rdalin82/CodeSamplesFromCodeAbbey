@@ -1,0 +1,9 @@
+
+
+
+public class BodyMassApp {
+	public static void main(String[] args) {
+		GetFile f =new GetFile("./test.txt");
+	}
+
+}

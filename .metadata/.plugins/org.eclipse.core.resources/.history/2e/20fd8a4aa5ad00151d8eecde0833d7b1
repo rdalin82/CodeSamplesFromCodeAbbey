@@ -1,0 +1,11 @@
+
+public class WsodApp {
+	public static void main(String[] args){
+		GetFile gf = new GetFile("./test.txt");
+		String stuff = gf.parseFile();
+		String[] stuffArray = stuff.split("\n");
+		System.out.println(stuffArray[0]);
+		
+		
+	}
+}

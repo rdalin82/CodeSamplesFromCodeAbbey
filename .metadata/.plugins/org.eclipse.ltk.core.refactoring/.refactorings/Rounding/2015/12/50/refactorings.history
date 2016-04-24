@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Rounder.java&apos; to &apos;FarenToCel/src/(default package)&apos;&#x0A;- Original project: &apos;Rounding&apos;&#x0A;- Destination element: &apos;FarenToCel/src/(default package)&apos;&#x0A;- Original element: &apos;Rounder.java&apos;" description="Copy compilation unit" destination="=FarenToCel/src&lt;" element1="/src&lt;{Rounder.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1449949199649" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,9 @@
+
+public class Wsod {
+
+	public Wsod(String filename){
+		GetFile gf = new GetFile(filename);
+		String input = gf.parseFile();
+		
+	}
+}

@@ -1,0 +1,21 @@
+
+public class SumOfDigits {
+	private int[][] input;
+	private String result="";
+	private int[] sums;
+	private String[][] stringSums;
+	private int[][] numSums;
+	private int[] intResults;
+	
+	public SumOfDigits(){
+		GetFile gf = new GetFile("./test.txt");
+		this.input = gf.getIntIntArray();
+	}
+	public String getResult(){
+		this.
+		for (int i=0;i<input.length;i++){
+			
+			
+		}
+	}
+}

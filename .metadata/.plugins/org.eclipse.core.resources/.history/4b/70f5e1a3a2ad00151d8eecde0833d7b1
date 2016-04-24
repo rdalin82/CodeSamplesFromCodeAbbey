@@ -1,0 +1,8 @@
+
+public class WsodApp {
+	public static void main(String[] args){
+		GetFile gf = new GetFile("./test.txt");
+		String output = gf.parseFile();
+		
+	}
+}

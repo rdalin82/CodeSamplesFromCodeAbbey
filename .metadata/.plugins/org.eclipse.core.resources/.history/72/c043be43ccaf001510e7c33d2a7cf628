@@ -1,0 +1,14 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class AvgArrayTest {
+
+	@Test
+	public void test() {
+		AvgArray test = new AvgArray("./test.txt");
+		assertEquals("2 3 7 0", test.getInputArray());
+	}
+
+}

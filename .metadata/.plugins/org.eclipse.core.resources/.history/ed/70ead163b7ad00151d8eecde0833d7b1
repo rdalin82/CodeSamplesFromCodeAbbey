@@ -1,0 +1,33 @@
+
+public class Wsod {
+	private int length;
+	private String input;
+	private String[] inputArray;
+
+	public Wsod(String filename){
+		GetFile gf = new GetFile(filename);
+		this.input = gf.parseFile();
+		this.inputArray = input.split("\n");
+		this.length = Integer.valueOf(inputArray[0]);
+	}
+	
+	public int getLength(){
+		return length;
+	}
+	public String getInput(){
+		return input;
+	}
+	
+	public String[] getInputArray(){
+		return inputArray;
+	}
+	
+	public int calculate(int index){
+		int num;
+		String nums = String.valueOf(inputArray[1]);
+		String[] list = nums.split(" ");
+		char[] target = list[index].toCharArray();
+		
+		return num;
+	}
+}

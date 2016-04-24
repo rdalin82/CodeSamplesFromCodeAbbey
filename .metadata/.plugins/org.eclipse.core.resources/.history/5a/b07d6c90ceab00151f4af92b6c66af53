@@ -1,0 +1,26 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Arrays;
+
+
+public class GetFile {
+	private String filename;
+	private String output; 
+	private int fileArrayLength = output.split("\n").length;
+	private String[] fileArray = new String[fileArrayLength];
+	private String[][] fileSpaceArray = new String[fileArrayLength][3]; 
+	private int[][] intIntArray = new int[fileArrayLength][3]; // nested array by line
+	
+	public GetFile(String filename){
+		this.filename = filename;
+	}
+	
+	public String[] splitLineInFileArray() {
+		fileArray = output.split("\n");
+		return fileArray;
+	}
+	public String[][] splitSpaceInFi

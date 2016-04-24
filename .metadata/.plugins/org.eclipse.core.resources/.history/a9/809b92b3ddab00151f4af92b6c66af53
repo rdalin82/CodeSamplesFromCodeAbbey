@@ -1,0 +1,65 @@
+
+public class SumOfDigits {
+	private int[][] input;
+	private String result;
+	private int[] sums;
+	private String[][] stringSums;
+	private int[][] numSums;
+	private int[] intResults;
+	
+	public SumOfDigits(){
+		GetFile gf = new GetFile("./test.txt");
+		this.input = gf.getIntIntArray();
+	}
+	
+	public int[] makeSums(){
+		this.sums = new int[input.length];
+		for (int i = 0; i < input.length; i++){
+			sums[i] = (input[i][0]*input[i][1])+input[i][2];
+		}
+		return sums;
+	}
+	
+	public String[][] splitSums(){
+		makeSums();
+		this.stringSums = new String[sums.length][3];
+		for (int i = 0; i< sums.length; i++){
+			
+			stringSums[i] = String.valueOf(sums[i]).split("");	
+		}
+		return stringSums;
+	}
+	public int[][] convertStringsToInt(){
+		makeSums();
+		splitSums();
+		this.numSums = new int[sums.length][3];
+		for (int i = 0; i<sums.length; i++){
+			for (int y = 0; y < 2; y++) {
+				numSums[i][y] = Integer.parseInt(stringSums[i][y]);
+			}
+		}
+		return numSums;
+	}
+	
+	public int[] addIntToSum(){
+		makeSums();
+		splitSums();
+		convertStringsToInt();
+		this.intResults = new int[sums.length];
+		for (int i=0;i<sums.length; i++){
+			intResults[i] = numSums[i][0]+numSums[i][1]+numSums[i][2];
+		}
+		return intResults;
+	}
+	public String getResult(){
+		makeSums();
+		splitSums();
+		convertStringsToInt();
+		addIntToSum(); 
+		for (int i=0; i < intResults.length; i++){
+			result = result + String.valueOf(intResults)+" ";
+		}
+		result = result.trim();
+		return result;
+	}
+}

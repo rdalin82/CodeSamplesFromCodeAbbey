@@ -1,0 +1,15 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class BodyMassTest {
+
+	@Test
+	public void test() {
+		BodyMass bm = new BodyMass();
+		assertEquals(, bm.getResult());
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,25 @@
+
+public class SumOfDigits {
+	private int[][] input;
+	private String result="";
+	private int[] sums;
+	private String[][] stringSums;
+	private int[][] numSums;
+	private int[] intResults;
+	
+	public SumOfDigits(){
+		GetFile gf = new GetFile("./test.txt");
+		this.input = gf.getIntIntArray();
+	}
+	public String getResult(){
+		this.sums = new int[input.length];
+		this.stringSums = new String[input.length][3];
+		this.numSums = new int[input.length][3];
+		this.intResults = new int[input.length];
+		for (int i=0;i<input.length;i++){
+			sums[i] = (input[i][0]*input[i][1])+input[i][2];	
+			System.out.println(sums[i]);
+		}
+		return result;
+	}
+}

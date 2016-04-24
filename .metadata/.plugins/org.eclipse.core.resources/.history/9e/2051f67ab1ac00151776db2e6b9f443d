@@ -1,0 +1,16 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class SumOfDigitsTest {
+
+	;
+
+	@Test
+	public void test() {
+		SumOfDigits sod = new SumOfDigits("./test.txt");
+		assertEquals(0, sod.getSums().getClass());
+	}
+
+}

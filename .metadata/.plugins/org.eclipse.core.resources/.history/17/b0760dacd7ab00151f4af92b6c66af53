@@ -1,0 +1,17 @@
+
+public class SumOfDigits {
+	private int[][] input;
+	private String result;
+	private int[] digits;
+	
+	public SumOfDigits(){
+		GetFile gf = new GetFile("./test.txt");
+		this.input = gf.getIntIntArray();
+	}
+	
+	
+	public String result(){
+		
+		return result;
+	}
+}

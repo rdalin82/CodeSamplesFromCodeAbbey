@@ -1,0 +1,15 @@
+
+public class DiceRoll {
+	private float[] input; 
+	
+	public DiceRoll(String filename){
+		GetFile gf = new GetFile(filename);
+		this.input = gf.getFloatArray();
+	}
+	public int[] calculateRolls(){
+		for (int i = 0; i < input.length; i++) {
+			
+		}
+	}
+
+}

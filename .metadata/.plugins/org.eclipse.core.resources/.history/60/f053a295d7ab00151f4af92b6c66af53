@@ -1,0 +1,15 @@
+
+public class SumOfDigits {
+	private int[][] input;
+	private String result;
+	
+	public SumOfDigits(){
+		GetFile gf = new GetFile("./test.txt");
+		this.input = gf.getIntIntArray();
+	}
+	
+	public String result(){
+		
+		return result;
+	}
+}

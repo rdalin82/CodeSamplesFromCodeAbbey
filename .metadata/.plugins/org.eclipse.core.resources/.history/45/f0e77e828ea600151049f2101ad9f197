@@ -1,0 +1,19 @@
+
+public class VowelCounterApp {
+
+	public static void main(String[] args) {
+		VowelCounter vc = new VowelCounter("./text.txt");
+//		vc.parseFile();
+//		vc.splitInput();
+		//System.out.println(vc.splitArray(vc.splitInput()[0]));
+//		for (int i = 0; i < vc.splitInput().length; i++ ){
+//			for (int y = 0; y < vc.splitArray(vc.splitInput()[i]).length; y++) {
+//				System.out.println(vc.splitArray(vc.splitInput()[i])[y]);
+//			}
+//		}
+		
+		System.out.println(vc.count());
+
+	}
+
+}

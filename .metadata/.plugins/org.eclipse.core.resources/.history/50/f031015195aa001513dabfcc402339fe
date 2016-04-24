@@ -1,0 +1,68 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.output.outputs;
+import java.nio.output.Path;
+import java.nio.output.Paths;
+import java.util.Arrays;
+
+
+public class Getoutput {
+	private String outputname;
+	private String output; 
+	private int outputArrayLength = output.split("\n").length;
+	private String[] outputArray = new String[outputArrayLength];
+	private String[][] outputSpaceArray = new String[outputArrayLength][3]; 
+	private int[][] intIntArray = new int[outputArrayLength][3]; // nested array by line
+	private String result ="";
+	
+	public String[] splitLineInoutputArray() {
+		outputArray = output.split("\n");
+		return outputArray;
+	}
+	public String[][] splitSpaceInoutputArray(){
+		for (int i = 0; i < outputArray.length; i++) {
+			outputSpaceArray[i] = outputArray[i].split(" ");
+		}
+		return outputSpaceArray;
+	}
+	public int[][] convertToIntArray() {
+		for (int i = 0; i < outputSpaceArray.length; i++) { 
+			for (int y = 0; y < outputSpaceArray[i].length; y++){
+				intIntArray[i][y] = Integer.parseInt(outputSpaceArray[i][y]);
+			}
+		}
+		return intIntArray; 
+	}
+
+	
+	public int[][] getIntIntArray(){
+		return intIntArray;
+	}
+	
+	public void sortIntIntArray(){
+		for (int i = 0; i < intIntArray.length; i++){
+			Arrays.sort(intIntArray[i]);
+		}
+	}
+	public Getoutput(String outputname){
+		this.outputname = outputname;
+	}
+
+	public String parseoutput(){
+		Charset charset = Charset.forName("US-ASCII");
+		Path p = Paths.get(outputname);
+		
+		try (BufferedReader reader = output.newBufferedReader(p, charset)) {
+			String line = "";
+			while((line = reader.readLine()) != null) {
+				output = output + line + "\n";
+			}
+		} catch (IOException x) {
+				System.err.format("IOxception: %s%n", x);
+			}
+		output = output.replace("null", "");
+		return output;
+	}
+
+}

@@ -1,0 +1,21 @@
+import static org.junit.Assert.*;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+
+public class WsodTest {
+
+	@Test
+	public void test() {
+		Wsod w = new Wsod("./test.txt");
+		int length = 3;
+		String inputs = "3\n9 15 1776";
+		String[] inputArray = {"9", "15", "1776"};
+		assertEquals(length, w.getLength());
+		assertEquals(inputs, w.getInput());
+//		Assert.assertArrayEquals(inputArray, w.getInputArray());
+		
+	}
+
+}

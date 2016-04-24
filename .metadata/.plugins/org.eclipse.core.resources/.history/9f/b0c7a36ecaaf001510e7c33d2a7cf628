@@ -1,0 +1,6 @@
+
+public class AvgArrayApp {
+	AvgArray avg = new AvgArray("./test.txt");
+	System.out.println(avg.getInput());
+
+}
